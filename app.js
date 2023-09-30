@@ -10,6 +10,9 @@ const PORT = 5000;
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
+app.get("/", (req, res) => {
+  res.send("helo world");
+});
 // user Authenitication & Authorization
 app.use("/api/v1/auth", authRouter);
 // add products
